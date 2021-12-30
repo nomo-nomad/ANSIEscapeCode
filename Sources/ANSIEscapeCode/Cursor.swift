@@ -25,86 +25,88 @@
 
 import Foundation
 
-/// Move cursor up.
-///
-/// - Parameter count: Number of cells to move.
-///                    Default value is 1.
-public func moveCursorUp(_ count: Int = 1) {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.up(count))
-}
+public extension CommandLine {
+    /// Move cursor up.
+    ///
+    /// - Parameter count: Number of cells to move.
+    ///                    Default value is 1.
+    static func moveCursorUp(_ count: Int = 1) {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.up(count))
+    }
 
-/// Move cursor down.
-///
-/// - Parameter count: Number of cells to move.
-///                    Default value is 1.
-public func moveCursorDown(_ count: Int = 1) {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.down(count))
-}
+    /// Move cursor down.
+    ///
+    /// - Parameter count: Number of cells to move.
+    ///                    Default value is 1.
+    static func moveCursorDown(_ count: Int = 1) {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.down(count))
+    }
 
-/// Move cursor forward.
-///
-/// - Parameter count: Number of cells to move.
-///                    Default value is 1.
-public func moveCursorForward(_ count: Int = 1) {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.forward(count))
-}
+    /// Move cursor forward.
+    ///
+    /// - Parameter count: Number of cells to move.
+    ///                    Default value is 1.
+    static func moveCursorForward(_ count: Int = 1) {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.forward(count))
+    }
 
-/// Move cursor backward.
-///
-/// - Parameter count: Number of cells to move.
-///                    Default value is 1.
-public func moveCursorBackward(_ count: Int = 1) {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.backward(count))
-}
+    /// Move cursor backward.
+    ///
+    /// - Parameter count: Number of cells to move.
+    ///                    Default value is 1.
+    static func moveCursorBackward(_ count: Int = 1) {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.backward(count))
+    }
 
-/// Move cursor to next line.
-///
-/// - Parameter count: Number of lines to move.
-///                    Default value is 1.
-public func moveCursorNextLine(_ count: Int = 1) {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.nextLine(count))
-}
+    /// Move cursor to next line.
+    ///
+    /// - Parameter count: Number of lines to move.
+    ///                    Default value is 1.
+    static func moveCursorNextLine(_ count: Int = 1) {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.nextLine(count))
+    }
 
-/// Move cursor to previous line.
-///
-/// - Parameter count: Number of lines to move.
-///                    Default value is 1.
-public func moveCursorPreviousLine(_ count: Int = 1) {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.previousLine(count))
-}
+    /// Move cursor to previous line.
+    ///
+    /// - Parameter count: Number of lines to move.
+    ///                    Default value is 1.
+    static func moveCursorPreviousLine(_ count: Int = 1) {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.previousLine(count))
+    }
 
-/// Move cursor to column.
-///
-/// - Parameter column: Target column.
-public func moveCursorToColumn(_ column: Int) {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.column(column))
-}
+    /// Move cursor to column.
+    ///
+    /// - Parameter column: Target column.
+    static func moveCursorToColumn(_ column: Int) {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.column(column))
+    }
 
-/// Move cursor to position.
-///
-/// - Parameters:
-///   - row: Traget row.
-///   - column: Target column.
-public func moveCursorToPosition(row: Int, column: Int) {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.position(row: row, column: column))
-}
+    /// Move cursor to position.
+    ///
+    /// - Parameters:
+    ///   - row: Traget row.
+    ///   - column: Target column.
+    static func moveCursorToPosition(row: Int, column: Int) {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.position(row: row, column: column))
+    }
 
-/// Save cursor position.
-public func saveCursorPosition() {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.saveCursorPosition)
-}
+    /// Save cursor position.
+    static func saveCursorPosition() {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.saveCursorPosition)
+    }
 
-/// Restore cursor position.
-public func restoreCursorPosition() {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.restoreCursorPosition)
-}
+    /// Restore cursor position.
+    static func restoreCursorPosition() {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.restoreCursorPosition)
+    }
 
-/// Hide cursor.
-public func hideCursor() {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.hideCursor)
-}
+    /// Hide cursor.
+    static func hideCursor() {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.hideCursor)
+    }
 
-/// Show cursor.
-public func showCursor() {
-    printANSIEscapeCode(ANSIEscapeCode.Cursor.showCursor)
+    /// Show cursor.
+    static func showCursor() {
+        printANSIEscapeCode(ANSIEscapeCode.Cursor.showCursor)
+    }
 }

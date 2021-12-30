@@ -25,18 +25,20 @@
 
 import Foundation
 
-/// Scroll screen up.
-/// New lines are added at the bottom.
-///
-/// - Parameter count: Number of lines to scroll.
-public func scrollUp(_ count: Int = 1) {
-    printANSIEscapeCode(ANSIEscapeCode.Scroll.up(count))
-}
+public extension CommandLine {
+    /// Scroll screen up.
+    /// New lines are added at the bottom.
+    ///
+    /// - Parameter count: Number of lines to scroll.
+    static func scrollUp(_ count: Int = 1) {
+        printANSIEscapeCode(ANSIEscapeCode.Scroll.up(count))
+    }
 
-/// Scroll screen down.
-/// New lines are added at the top.
-///
-/// - Parameter count: Number of lines to scroll.
-public func scrollDown(_ count: Int = 1) {
-    printANSIEscapeCode(ANSIEscapeCode.Scroll.down(count))
+    /// Scroll screen down.
+    /// New lines are added at the top.
+    ///
+    /// - Parameter count: Number of lines to scroll.
+    static func scrollDown(_ count: Int = 1) {
+        printANSIEscapeCode(ANSIEscapeCode.Scroll.down(count))
+    }
 }

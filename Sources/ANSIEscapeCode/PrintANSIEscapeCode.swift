@@ -28,7 +28,7 @@ import Foundation
 /// Print ANSI escape code.
 ///
 /// - Parameter code: ANSI escape code to print.
-public func printANSIEscapeCode(_ code: String) {
+internal func printANSIEscapeCode(_ code: String) {
     print(code, terminator: "")
     fflush(stdout)
 }
